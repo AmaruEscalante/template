@@ -7,5 +7,9 @@ export default defineConfig({
   server: {
     host: true, // Listen on all addresses
     allowedHosts: true, // Allow all hosts (required for cloud development environments)
+    headers: {
+      'X-Frame-Options': 'ALLOWALL',
+      'Content-Security-Policy': 'frame-ancestors *'
+    }
   },
 })
